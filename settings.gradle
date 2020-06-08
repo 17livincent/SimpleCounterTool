@@ -1,0 +1,2 @@
+rootProject.name='Simple Counter Tool'
+include ':app'
