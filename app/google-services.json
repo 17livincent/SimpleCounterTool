@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "932073241245",
+    "firebase_url": "https://simple-counter-tool-app.firebaseio.com",
+    "project_id": "simple-counter-tool-app",
+    "storage_bucket": "simple-counter-tool-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932073241245:android:65b993c19a11ed11323274",
+        "android_client_info": {
+          "package_name": "com.vincentl.simplecountertool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932073241245-8cik9qt0uknce070827r84r1e6ha0pu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbahcKzpXYGOezt1dv7NnsM9lJsYufHxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932073241245-8cik9qt0uknce070827r84r1e6ha0pu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
