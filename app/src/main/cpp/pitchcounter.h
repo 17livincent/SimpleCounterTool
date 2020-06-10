@@ -5,6 +5,7 @@
 #pragma ounce
 #ifndef PITCHCOUNTER_PITCHCOUNTER_H
 #define PITCHCOUNTER_PITCHCOUNTER_H
+#include <string>
 
 class PitchCounter {
 public:

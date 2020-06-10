@@ -4,7 +4,6 @@
 */
 
 #include "pitchcounter.h"
-#include <string>
 
 PitchCounter::PitchCounter() {
     count = 0;
@@ -15,7 +14,7 @@ void PitchCounter::add() {
 }
 
 void PitchCounter::subtract() {
-    count--;
+    if(count > 0) count--;
 }
 
 void PitchCounter::clear() {
