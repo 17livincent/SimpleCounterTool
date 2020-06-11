@@ -6,11 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.ads.consent.*;
+import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,13 +41,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setupAds() {
+        // use rdp for ccpa
+        Bundle networkExtrasBundle = new Bundle();
+        networkExtrasBundle.putInt("rdp", 1);
+        AdRequest request1 = new AdRequest.Builder()
+                .addNetworkExtrasBundle(AdMobAdapter.class, networkExtrasBundle)
+                .build();
         // AdMob initialize
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
+            public void onInitializationComplete(InitializationStatus initializationStatus) {}
         });
+        List<String> testDeviceIds = Arrays.asList("9E86A33DEE58FABB4244129F816B9102");
+        RequestConfiguration config = new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+        // define banner
         bannerAd = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         bannerAd.loadAd(adRequest);
