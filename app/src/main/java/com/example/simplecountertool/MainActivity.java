@@ -1,9 +1,15 @@
 package com.example.simplecountertool;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.ads.consent.*;
@@ -36,8 +42,35 @@ public class MainActivity extends AppCompatActivity {
 
         setupAds();
 
+        // set up cancel alert
+        Button clearButton = findViewById(R.id.button3);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        clearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                builder.setTitle(R.string.clear)
+                        .setMessage(R.string.cancel_prompt)
+                        .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // affirm
+                                clearCount(view);
+                                //finish();
+                            }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                // cancel
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
         // Create PitchCounter class
         PitchCounter();
+
     }
 
     public void setupAds() {
@@ -81,7 +114,6 @@ public class MainActivity extends AppCompatActivity {
         count.setText(getCount());
     }
 
-
     /**
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
@@ -93,4 +125,5 @@ public class MainActivity extends AppCompatActivity {
     public native void subtract();
     public native void clear();
     public native String getCount();
+
 }

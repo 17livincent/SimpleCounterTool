@@ -6,4 +6,7 @@
     <string name="undo">Subtract</string>
     <string name="clear">Clear</string>
     <string name="info">Hobby project by\nVincent Li</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_prompt">Are you sure you would like to clear the current count?</string>
 </resources>
