@@ -1,18 +1,14 @@
 package com.example.simplecountertool;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentManager;
-
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.ads.consent.*;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.ads.mediation.admob.AdMobAdapter;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -21,14 +17,10 @@ import com.google.android.gms.ads.RequestConfiguration;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
-    private AdView bannerAd;
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -88,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         List<String> testDeviceIds = Arrays.asList("9E86A33DEE58FABB4244129F816B9102");
         RequestConfiguration config = new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
         // define banner
-        bannerAd = findViewById(R.id.adView);
+        AdView bannerAd = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         bannerAd.loadAd(adRequest);
     }
@@ -118,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
 
     public native void PitchCounter();
     public native void add();
