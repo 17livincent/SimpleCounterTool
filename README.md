@@ -8,5 +8,5 @@
 </ul>
 <h2>Screenshots</h2>
 
-![Screenshot 1](/screenshot1_compressed.png)
-![Screenshot 2](/screenshot2_compressed.png)
+![Screenshot 1](screenshot_compressed1.png)
+![Screenshot 2](screenshot_compressed2.png)
