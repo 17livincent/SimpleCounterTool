@@ -77,8 +77,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {}
         });
-        List<String> testDeviceIds = Arrays.asList("9E86A33DEE58FABB4244129F816B9102");
+        List<String> testDeviceIds = Arrays.asList("8345094437DF2F5C0A310A1D99F845EF");
         RequestConfiguration config = new RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build();
+        MobileAds.setRequestConfiguration(config);
         // define banner
         AdView bannerAd = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

@@ -13,6 +13,8 @@
         android:versionName="1.0">
 
         <!--For AdMob-->
+        <!-- test ad is ca-app-pub-3940256099942544/6300978111 -->
+        <!-- actual ad is ca-app-pub-8964153745937972~5816748636 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8964153745937972~5816748636"/>
