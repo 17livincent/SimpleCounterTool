@@ -88,21 +88,21 @@ public class MainActivity extends AppCompatActivity {
     public void incrementCount(View view) {
         // call the PitchCounter.add() function
         add();
-        TextView count = findViewById(R.id.textView2);
-        count.setText(getCount());
+        TextView tv = findViewById(R.id.textView);
+        tv.setText(getCount());
     }
 
     public void undoCount(View view) {
         // call the PitchCounter.undo() function
         subtract();
-        TextView count = findViewById(R.id.textView2);
+        TextView count = findViewById(R.id.textView);
         count.setText(getCount());
     }
 
     public void clearCount(View view) {
         // call the PitchCounter.clear() function
         clear();
-        TextView count = findViewById(R.id.textView2);
+        TextView count = findViewById(R.id.textView);
         count.setText(getCount());
     }
 
