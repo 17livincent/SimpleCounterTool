@@ -6,7 +6,4 @@
     <li>AdMob integration for banner ads and monetization</li>
     <li>Incorporating native (C++) code for back-end</li>
 </ul>
-<h2>Screenshots</h2>
-
-![Screenshot 1](screenshot_compressed1.png)
-![Screenshot 2](screenshot_compressed2.png)
+<p>Visit the app's [Play Store page](https://play.google.com/store/apps/details?id=com.vincentl.simplecountertool) for more info.</p>
