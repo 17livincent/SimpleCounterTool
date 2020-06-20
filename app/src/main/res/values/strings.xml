@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple Counter Tool</string>
+    <string name="app_name">Counter Tool</string>
     <string name="title">Simple Counter Tool</string>
     <string name="count">0</string>
     <string name="add">Add</string>

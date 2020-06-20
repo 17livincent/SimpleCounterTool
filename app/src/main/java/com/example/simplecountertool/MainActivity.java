@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         setupAds();
 
         // set up cancel alert
-        Button clearButton = findViewById(R.id.button3);
+        Button clearButton = findViewById(R.id.button_clear);
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,21 +89,21 @@ public class MainActivity extends AppCompatActivity {
     public void incrementCount(View view) {
         // call the PitchCounter.add() function
         add();
-        TextView tv = findViewById(R.id.textView);
+        TextView tv = findViewById(R.id.textView_count);
         tv.setText(getCount());
     }
 
     public void undoCount(View view) {
         // call the PitchCounter.undo() function
         subtract();
-        TextView count = findViewById(R.id.textView);
+        TextView count = findViewById(R.id.textView_count);
         count.setText(getCount());
     }
 
     public void clearCount(View view) {
         // call the PitchCounter.clear() function
         clear();
-        TextView count = findViewById(R.id.textView);
+        TextView count = findViewById(R.id.textView_count);
         count.setText(getCount());
     }
 

@@ -8,4 +8,5 @@
 </ul>
 <p>Visit the app's 
 
-[Play Store page](https://play.google.com/store/apps/details?id=com.vincentl.simplecountertool) for more info.</p>
+[Play Store page](https://play.google.com/store/apps/details?id=com.vincentl.simplecountertool) 
+for more info.</p>
